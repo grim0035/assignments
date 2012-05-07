@@ -14,4 +14,4 @@ Separate with an empty line
 1. Num
 2. Num 2
 
-[Grim0035 On Github]
+[Scott G On Github https://github.com/grim0035]

@@ -19,4 +19,15 @@ For some time past vessels had been met by "an enormous thing," a long object, s
 
 [From Project Gutenberg](http://www.gutenberg.org/ebooks/164)
 
+##About Jules Verne
+
+Jules Gabriel Verne (February 8, 1828 – March 24, 1905) was a French author who pioneered the science fiction genre. Verne wrote about [space](http://en.wikipedia.org/wiki/Outer_space), [air](http://en.wikipedia.org/wiki/Aircraft), and [underwater](http://en.wikipedia.org/wiki/Submarine) travel before air travel and practical submarines were invented, and before practical means of space travel had been devised.
+
+[Wikipedia entry](http://en.wikipedia.org/wiki/Jules_Verne)
+
+##Other books by Jules Verne
+
+1. A Journey to the Centre of the Earth
+2. Around the World in Eighty Days
+
 [Scott G. On Github https://github.com/grim0035]

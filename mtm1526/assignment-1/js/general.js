@@ -33,13 +33,13 @@ document.write(letter + '<br>');
 
 // trying to add 1 name each time it writes the variable name
 if (letter) {
-	for (var i = 0; i < 9; i++){
-		document.write(letter + '<br>');//write a character
+	for (var i = 0; i <= 8; i++){
+		document.write(letter + '<br>');//write a letter
 
 	
-	for (var j = 0; j <= i; j++)// a loop, counting from 0 to whatever value i is currently on
+	for (var j = 0; j <= i; j++)// add 1 letter to each line up to value of i or 10 times
 	{
-		document.write(letter);//write a character
+		document.write(letter);//write the letter
 	}
 	}	
 

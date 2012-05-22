@@ -1,5 +1,11 @@
 <?php
 var_dump($_POST);
+
+$num1 = 0;
+$num2 = 0;
+$funct = '+';
+$subtotal = 0;
+
 ?>
 
 <!DOCTYPE HTML>
@@ -10,7 +16,8 @@ var_dump($_POST);
 </head>
 
 <body>
-
+	
+	<?php //if ($_SERVER['REQUEST_METHOD'] == 'GET') : ?>
 	<form method="post" action="index.php">
 		
 		<label for="num1">Number 1</label>
@@ -19,8 +26,8 @@ var_dump($_POST);
 		<label for="num2">Number 2</label>
 		<input type="number" id="num2" name="num2">
 	
-		<label for="math">Math</label>
-			<select id="math" name="math">
+		<label for="func">Function</label>
+			<select id="func" name="func">
 			<option value="+">add</option>
 			<option value="-">subtract</option>
 			<option value="*">multiply</option>

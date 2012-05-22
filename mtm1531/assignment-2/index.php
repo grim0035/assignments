@@ -10,7 +10,24 @@ var_dump($_POST);
 </head>
 
 <body>
+
+	<form method="post" action="index.php">
+		
+		<label for="num1">Number 1</label>
+		<input type="number" id="num1" name="num1">
 	
+		<label for="num2">Number 2</label>
+		<input type="number" id="num2" name="num2">
+	
+		<label for="math">Math</label>
+			<select id="math" name="math">
+			<option value="+">add</option>
+			<option value="-">subtract</option>
+			<option value="*">multiply</option>
+			<option value="/">divide</option>
+			</select>
+
+		<button>Calculate</button>
 
 
 </body>

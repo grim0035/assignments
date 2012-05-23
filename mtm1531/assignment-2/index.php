@@ -7,8 +7,7 @@ $func = '+';
 $subtotal = 0;
 
 $total = $subtotal * 1.13;
-?>
-<?php
+
 
 if (isset($_POST['func'])) {
 	$func = $_POST['func']);

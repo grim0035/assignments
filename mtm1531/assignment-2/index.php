@@ -17,9 +17,9 @@ $num2 = $_POST['num2'];
 
 if (isset($_POST['func'])) {
 $func = $_POST['func'];
-}	
+}
 
-	switch ($func) {
+switch ($func) {
 	case 'subtract' :
 	$subtotal = $num1 - $num2;
 	break; 
@@ -32,12 +32,12 @@ $func = $_POST['func'];
 	$subtotal = $num1 / $num2;
 	break;
 		
-case 'add':
-default: // set default for any other possible query, must be last in the switch statement.
-		$subtotal = $num1 + $num2;
-		break;
-		}
-	?>	
+	case 'add':
+	default: // set default for any other possible query, must be last in the switch statement.
+	$subtotal = $num1 + $num2;
+	break;
+	}
+?>	
 
 
 <!DOCTYPE HTML>

@@ -5,24 +5,30 @@ $num1 = 0;
 $num2 = 0;
 $func = '+';
 $subtotal = 0;
-	?>
+
+$total = $subtotal * 1.13;
+?>
 <?php
 
-if (isset($_GET['func'])) {
-	$func = strtolower($_GET['func']);
+if (isset($_POST['func'])) {
+	$func = $_POST['func']);
 }	
 
 	switch ($_POST['func']) {
-		case 1 :
-		break 
+		case '-' :
+		$func = 'num1' - 'num2'
+		break; 
 		
-		case 2 :			
+		case '*' :	
+		$func = 'num1' * 'num2'
 		break;
 			
-		case 3 :
+		case '/' : 
+		$func = 'num1' / 'num2'
 		break;
 		
-		case 4 :
+default: // set default for any other possible query, must be last in the switch statement.
+		$func = 'num1' + 'num2'
 		break;
 		}
 	?>	
@@ -56,6 +62,6 @@ if (isset($_GET['func'])) {
 
 		<button>Calculate</button>
 
-
+	<p>Total: <?php echo $_GET['$total']; ?></p>	
 </body>
 </html>

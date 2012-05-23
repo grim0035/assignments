@@ -5,6 +5,8 @@ $num1 = 0;
 $num2 = 0;
 $func = '+';
 $subtotal = 0;
+	?>
+<?php
 
 if (isset($_GET['func'])) {
 	$func = strtolower($_GET['func']);
@@ -23,7 +25,7 @@ if (isset($_GET['func'])) {
 		case 4 :
 		break;
 		}
-	?>
+	?>	
 <?php endif; ?>
 
 

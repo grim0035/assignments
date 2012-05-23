@@ -1,5 +1,4 @@
 <?php
-var_dump($_POST);
 
 $num1 = 0;
 $num2 = 0;
@@ -17,21 +16,21 @@ $num2 = $_POST['num2'];
 }
 
 if (isset($_POST['func'])) {
-	$func = $_POST['func'];
+$func = $_POST['func'];
 }	
 
 	switch ($func) {
-		case 'subtract' :
-		$subtotal = $num1 - $num2;
-		break; 
+	case 'subtract' :
+	$subtotal = $num1 - $num2;
+	break; 
+	
+	case 'multiply' :	
+	$subtotal = $num1 * $num2;
+	break;
 		
-		case 'multiply' :	
-		$subtotal = $num1 * $num2;
-		break;
-			
-		case 'divide' : 
-		$subtotal = $num1 / $num2;
-		break;
+	case 'divide' : 
+	$subtotal = $num1 / $num2;
+	break;
 		
 case 'add':
 default: // set default for any other possible query, must be last in the switch statement.
@@ -67,7 +66,6 @@ default: // set default for any other possible query, must be last in the switch
 			</select>
 
 		<button>Calculate</button>
-
-	<p>Total: <?php echo number_format($total, 2); ?></p>	
+	<p>Total: $<?php echo number_format($total, 2); ?></p>	
 </body>
 </html>

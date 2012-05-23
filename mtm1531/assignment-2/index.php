@@ -8,6 +8,13 @@ $subtotal = 0;
 
 $total = $subtotal * 1.13;
 
+if (isset($_POST['num1'])) {
+$num1 = $_POST['num1'];
+}
+
+if (isset($_POST['num2'])) {
+$num2 = $_POST['num2'];
+}
 
 if (isset($_POST['func'])) {
 	$func = $_POST['func'];

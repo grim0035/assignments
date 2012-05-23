@@ -1,11 +1,11 @@
 <?php
+var_dump ($_POST);
 
 $num1 = 0;
 $num2 = 0;
 $func = '+';
 $subtotal = 0;
 
-$total = $subtotal * 1.13;
 
 if (isset($_POST['num1'])) {
 $num1 = $_POST['num1'];
@@ -37,6 +37,8 @@ switch ($func) {
 	$subtotal = $num1 + $num2;
 	break;
 	}
+	$total = $subtotal * 1.13;
+
 ?>	
 
 

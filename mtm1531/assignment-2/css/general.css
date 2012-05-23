@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+	font-family:Verdana, Geneva, sans-serif;
+	
+}
+
+input, select{
+	display:block;
+}

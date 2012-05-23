@@ -1,5 +1,5 @@
 <?php
-var_dump ($_POST);
+//var_dump ($_POST);
 
 $num1 = 0;
 $num2 = 0;
@@ -37,7 +37,8 @@ switch ($func) {
 	$subtotal = $num1 + $num2;
 	break;
 	}
-	$total = $subtotal * 1.13;
+	
+	$total = $subtotal * 1.13; //the total var has to come after the switch to work
 
 ?>	
 
@@ -47,6 +48,7 @@ switch ($func) {
 <head>
 <meta charset="utf-8">
 <title>Assignment 2 &middot; Money Calculator</title>
+<link href="css/general.css" rel="stylesheet">
 </head>
 
 <body>

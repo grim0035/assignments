@@ -15,19 +15,20 @@ if (isset($_POST['func'])) {
 
 	switch ($func) {
 		case '-' :
-		$subtotal = $num1 - $num2
+		$subtotal = $num1 - $num2;
 		break; 
 		
 		case '*' :	
-		$subtotal = $num1 * $num2
+		$subtotal = $num1 * $num2;
 		break;
 			
 		case '/' : 
-		$subtotal = $num1 / $num2
+		$subtotal = $num1 / $num2;
 		break;
 		
+case '+':
 default: // set default for any other possible query, must be last in the switch statement.
-		$subtotal = $num1 + $num2
+		$subtotal = $num1 + $num2;
 		break;
 		}
 	?>	

@@ -62,6 +62,6 @@ default: // set default for any other possible query, must be last in the switch
 
 		<button>Calculate</button>
 
-	<p>Total: <?php echo $_GET['$total']; ?></p>	
+	<p>Total: <?php echo $_POST['$total']; ?></p>	
 </body>
 </html>

@@ -13,7 +13,7 @@ if (isset($_POST['func'])) {
 	$func = $_POST['func'];
 }	
 
-	switch ($_POST['func'] {
+	switch ($func) {
 		case '-' :
 		$subtotal = $num1 - $num2
 		break; 

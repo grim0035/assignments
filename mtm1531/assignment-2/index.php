@@ -3,10 +3,29 @@ var_dump($_POST);
 
 $num1 = 0;
 $num2 = 0;
-$funct = '+';
+$func = '+';
 $subtotal = 0;
 
-?>
+if (isset($_GET['func'])) {
+	$func = strtolower($_GET['func']);
+}	
+
+	switch ($_POST['func']) {
+		case 1 :
+		break 
+		
+		case 2 :			
+		break;
+			
+		case 3 :
+		break;
+		
+		case 4 :
+		break;
+		}
+	?>
+<?php endif; ?>
+
 
 <!DOCTYPE HTML>
 <html>
@@ -17,7 +36,6 @@ $subtotal = 0;
 
 <body>
 	
-	<?php //if ($_SERVER['REQUEST_METHOD'] == 'GET') : ?>
 	<form method="post" action="index.php">
 		
 		<label for="num1">Number 1</label>

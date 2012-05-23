@@ -16,23 +16,22 @@ if (isset($_POST['func'])) {
 
 	switch ($_POST['func']) {
 		case '-' :
-		$func = 'num1' - 'num2'
+		$func = $num1 - $num2
 		break; 
 		
 		case '*' :	
-		$func = 'num1' * 'num2'
+		$func = $num1 * $num2
 		break;
 			
 		case '/' : 
-		$func = 'num1' / 'num2'
+		$func = $num1 / $num2
 		break;
 		
 default: // set default for any other possible query, must be last in the switch statement.
-		$func = 'num1' + 'num2'
+		$func = $num1 + $num2
 		break;
 		}
 	?>	
-<?php endif; ?>
 
 
 <!DOCTYPE HTML>

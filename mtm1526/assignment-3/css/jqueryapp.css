@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
-
+select, input, button {
+	display: block;
+}
 html {
 	background-color:#ccc;
 }
@@ -9,11 +11,20 @@ div {
 	width: 200px;
 	height: 200px;
 	border: 12px solid #000;	
-	border-radius: 200px;
-	position: absolute;
-	left: 200px;
-	top: 200px;
-	-moz-transition: all 250ms linear;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	border-radius: 200px;	
+	/*position: absolute;
+	left: 125px;
+	top: 100px;
+	
+	*/
+
+	-webkit-transition: color 250ms linear;
+	-moz-transition: color 250ms linear;
+	-ms-transition: color 250ms linear;
+	-o-transition: color 250ms linear;
+	transition: color 250ms linear;
 	text-align: center;
 	color: #000;
 	font-size: 1.5em;

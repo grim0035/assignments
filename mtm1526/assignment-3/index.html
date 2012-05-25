@@ -9,12 +9,20 @@
 <body>
 	
 	<form>
+		<label for="property">Property</label>
+		<select id="property" name="property">
+			<option value="border-color">Border Colour</option>
+			<option value="background-color">Background Colour</option>
+			<option value="color">Text Colour</option>
+		</select>
 		<label for="color">Colour</label>
-		<input id="color" name="color">
-		<button type="submit">Apply</button>
+		<input id="color" name="color" value="">
+		<button type="submit" id="apply">Apply</button>
+		<!--<button id="hideshow">Hide/Show</button>-->
+
 	</form>
 	
-	<div></div>
+	<div id="circ"></div>
 	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>

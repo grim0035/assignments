@@ -6,8 +6,8 @@ $(document).ready(function() {
 	ev.preventDefault();
 	//console.log('form submitted'); //test if this is working
 	var color = $('#color').val(); //same as item.value
-	$('div').css('background-color'), ('.val');
-	
+	//console.log(color); //test if color value is working
+	 //$('#circ').css('background-color','#fff');
 	});
 	
 	

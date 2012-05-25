@@ -1,3 +1,21 @@
 @charset "utf-8";
 /* CSS Document */
 
+html {
+	background-color:#ccc;
+}
+div {
+	background-color: #f00;
+	width: 200px;
+	height: 200px;
+	border: 12px solid #000;	
+	border-radius: 200px;
+	position: absolute;
+	left: 200px;
+	top: 200px;
+	-moz-transition: all 250ms linear;
+	text-align: center;
+	color: #000;
+	font-size: 1.5em;
+	line-height: 20px;
+}

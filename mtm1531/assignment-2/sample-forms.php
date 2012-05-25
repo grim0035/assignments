@@ -25,7 +25,7 @@ var_dump($_POST);
 			<option value="5">5 stars</option>
 		</select>
 		
-		<button type="submit">submit</button>
+		<button id="submit">submit</button>
 	</form>
 		
 	<?php else : ?>

@@ -1,3 +1,19 @@
 @charset "UTF-8";
 /* CSS Document */
 
+html {
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+input, label, button {
+	display:block;
+}
+
+fieldset + input, label {
+	display:inline;
+}
+
+.error {
+	color: #f33;
+	font-size: .9em;
+}

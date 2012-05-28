@@ -1,13 +1,7 @@
 <?php
-/*
-$possible_subjects = array(
-	'Work inquiries'
-	, 'General information'
-	, 'Unicorns for sale'
-);
 
 require_once 'includes/form-processor.php';
-*/
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -30,11 +24,11 @@ require_once 'includes/form-processor.php';
 			<input type="email" id="email" name="email" required value="<?php echo $email; ?>">	
 		</div>
 		<div>
-			<label for="username">Username <?php if (isset($errors['name'])) : ?><strong class="error">is required</strong><?php endif; ?></label>
+			<label for="username">Username <?php if (isset($errors['username'])) : ?><strong class="error">max. 25 characters</strong><?php endif; ?></label>
 			<input id="username" name="username" required value="<?php echo $username; ?>">	
 		</div>
 		<div>
-			<label for="password">Password <?php if (isset($errors['name'])) : ?><strong class="error">max. 25 characters</strong><?php endif; ?></label>
+			<label for="password">Password <?php if (isset($errors['password'])) : ?><strong class="error">is required</strong><?php endif; ?></label>
 			<input id="password" name="password" type="password" required value="<?php echo $password; ?>">	
 		</div>
 		<div>
@@ -49,7 +43,7 @@ require_once 'includes/form-processor.php';
 		</fieldset>
 		</div>
 		<div>
-			<label for="notes">Notes <?php if (isset($errors['message'])) : ?><strong class="error">must be between 5 and 100 characters long.</strong><?php endif; ?></label>
+			<label for="notes">Notes <?php if (isset($errors['notes'])) : ?><strong class="error">must be between 5 and 100 characters long.</strong><?php endif; ?></label>
 			<textarea id="notes" required name="notes"><?php echo $notes; ?></textarea>
 			<p>5 to 100 characters.</p>	
 		</div>

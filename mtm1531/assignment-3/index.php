@@ -34,16 +34,18 @@ require_once 'includes/form-processor.php';
 			<input id="username" name="username" required value="<?php echo $username; ?>">	
 		</div>
 		<div>
-			<label for="password">Password <?php if (isset($errors['name'])) : ?><strong class="error">is required</strong><?php endif; ?></label>
+			<label for="password">Password <?php if (isset($errors['name'])) : ?><strong class="error">max. 25 characters</strong><?php endif; ?></label>
 			<input id="password" name="password" type="password" required value="<?php echo $password; ?>">	
 		</div>
 		<div>
 		<fieldset>
 			<legend>Preferred Language:</legend>
 			<input type="radio" id="lang" name="lang" value="english">
-			<label for="english" name="english">english</label>
+			<label for="english" name="english">English</label>
 			<input type="radio" id="lang" name="lang" value="french">
-			<label for="french" name="french">french</label>
+			<label for="french" name="french">French</label>
+			<input type="radio" id="lang" name="lang" value="spanish">
+			<label for="spanish" name="spanish">Spanish</label>
 		</fieldset>
 		</div>
 		<div>

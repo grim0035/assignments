@@ -37,6 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	
 	if (empty($errors)) {
 		$headers = 'From: ' . $name . ' <' . $email . '>'; //this from can be made up ie 'noreply@web.com'
-		mail('grim0035@algonquinlive.com', 'From contact form', $possible_subjects[$subject], $notes, $headers);
+		mail('grim0035@algonquinlive.com', 'Thank you. You are now registered', $possible_subjects[$subject], $notes, $headers);
 	}
 }

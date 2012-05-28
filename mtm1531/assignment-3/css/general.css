@@ -3,13 +3,40 @@
 
 html {
 	font-family:Verdana, Geneva, sans-serif;
+	background-color: #CC9;
+	color: #333;
 }
 
-input, label, button {
+input, label, textarea {
 	display:block;
+	margin: 10px 0px;
 }
 
-fieldset + input, label {
+fieldset > input, label {
+	display:inline;
+	margin: 10px 0;
+}
+
+fieldset > label {
+	margin: 10px 10px 0 0;
+	border: 0;
+
+}
+
+form {
+	width: 30%;
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid #990;
+	border-radius: 10px;
+
+}
+
+div > #notes {
+	margin: 10px 0 0 0;
+}
+
+#terms {
 	display:inline;
 }
 

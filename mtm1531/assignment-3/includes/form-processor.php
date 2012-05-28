@@ -19,16 +19,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$errors['email'] = true;
 	}
 	
+	if (mb_strlen($username) > 25) {
+		$errors['username'] = true;
+	}
+	
 	if (!array_key_exists($subject, $possible_subjects)) {
 		$errors['subject'] = true;
 	}
 	
-	if (mb_strlen($notes) < 5 || mb_strlen($notes) > 100) {
-		$errors['notes'] = true;
-	}
-	
 	if (!isset($_POST['terms'])) {
 		$errors['terms'] = true;
+	}
+	
+	if (!isset($_POST['lang'])) {
+		$errors['lang'] = true;
 	}
 	
 	if (empty($errors)) {

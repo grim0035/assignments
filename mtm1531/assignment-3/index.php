@@ -33,19 +33,19 @@ require_once 'includes/form-processor.php';
 		</div>
 		<div>
 		<fieldset>
-			<legend>Preferred Language:</legend>
-			<input type="radio" id="lang" name="lang" value="english">
+			<legend>Preferred Language: <?php if (isset($errors['terms'])) : ?><strong class="error">is required</strong><?php endif; ?></legend>
+			<input type="radio" id="english" name="lang" value="english">
 			<label for="english" name="english">English</label>
-			<input type="radio" id="lang" name="lang" value="french">
+			<input type="radio" id="french" name="lang" value="french">
 			<label for="french" name="french">French</label>
-			<input type="radio" id="lang" name="lang" value="spanish">
+			<input type="radio" id="spanish" name="lang" value="spanish">
 			<label for="spanish" name="spanish">Spanish</label>
 		</fieldset>
 		</div>
 		<div>
-			<label for="notes">Notes <?php if (isset($errors['notes'])) : ?><strong class="error">must be between 5 and 100 characters long.</strong><?php endif; ?></label>
+			<label for="notes">Notes</label>
 			<textarea id="notes" required name="notes"><?php echo $notes; ?></textarea>
-			<p>5 to 100 characters.</p>	
+			<p>(5 to 100 characters.)</p>	
 		</div>
 		<div>
 		<input type="checkbox" id="terms" name="terms" value="1">

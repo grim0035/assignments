@@ -33,7 +33,7 @@ require_once 'includes/form-processor.php';
 		</div>
 		<div>
 		<fieldset>
-			<legend>Preferred Language: <?php if (isset($errors['terms'])) : ?><strong class="error">is required</strong><?php endif; ?></legend>
+			<legend>Preferred Language: <?php if (isset($errors['lang'])) : ?><strong class="error">is required</strong><?php endif; ?></legend>
 			<input type="radio" id="english" name="lang" value="english">
 			<label for="english" name="english">English</label>
 			<input type="radio" id="french" name="lang" value="french">

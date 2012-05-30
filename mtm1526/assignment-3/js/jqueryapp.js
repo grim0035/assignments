@@ -8,7 +8,7 @@ $(document).ready(function() {
 	var color = $('#color').val(); //same as item.value
 	//console.log(color); //test if color value is working
 	 //$('#circ').css('background-color','#fff'); this works
-	 $('#circ').css('background-color', ''); //need to use value of 'color'
+	 $('#circ').css('background-color', color); //need to use value of 'color'
 	 //need a switch loop for the dropdown to use value of 'color'
 
 	});

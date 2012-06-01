@@ -7,11 +7,9 @@ $(document).ready(function() {
 	//console.log('form submitted'); //test if this is working
 	var color = $('#color').val();
 	//var property = $('#property').val();
-	var brdrcolor = $('#color').val();
-	var bgcolor = $('#color').val();
-	var txtcolor = $('#color').val();//same as item.value
-	//console.log(color); //test if color value is working
-	//$('#circ').css('background-color','#fff'); this works
+	var brdrcolor = $('border-color').val();
+	var bgcolor = $('background-color').val();
+	var txtcolor = $('text-color').val();//same as item.value
 	//$('#circ').css('background-color', color); //this works.
 	//need a switch loop for the dropdown to use value of 'color'
 		/*if ($(property) == ('#background-color')) {
@@ -21,8 +19,26 @@ $(document).ready(function() {
 		$('#property').change(function () {
 			var property = "";
 			$("select option:selected").each(function () {
-			property = $(brdrcolor).val();
+			//property == $('#property').val();
 			$('#circ').css('background-color', color); //this works.
+
+			});
+		})
+		
+		$('#property').change(function () {
+			var property = "";
+			$("select option:selected").each(function () {
+			//property == $(bgcolor).val();
+			$('#circ').css('border-color', color); 
+
+			});
+		})
+		
+		$('#property').change(function () {
+			var property = "";
+			$("select option:selected").each(function () {
+			//property == $(bgcolor).val();
+			$('#circ').css('color', color); 
 
 			});
 		})

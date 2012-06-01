@@ -14,9 +14,9 @@ div {
 	-webkit-border-radius: 200px;
 	-moz-border-radius: 200px;
 	border-radius: 200px;	
-	/*position: absolute;
-	left: 125px;
-	top: 100px;
+	position: relative;
+	left: 0px;
+	top: 25px;
 	
 	*/
 
@@ -27,12 +27,13 @@ div {
 	transition: color 250ms linear;
 	text-align: center;
 	color: #000;
-	font-size: 1.5em;
-	line-height: 20px;
+
 }
 p {
-	font-size: 6em;
+	font-size: 12em;
 	position: relative;
+	left: 0px;
+	top: -20px;
 	margin:0;
 	padding:0;
 }

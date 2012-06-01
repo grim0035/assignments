@@ -15,7 +15,7 @@ $(document).ready(function() {
 	//need a switch loop for the dropdown to use value of 'color'
 	
 		$('#property').change(function () {
-			var property = "";
+			//var property = "";
 			$("select option:selected").each(function () {
 			//property == $(border-color).val(); //doesn't work
 				if ($("select option:selected").val() == "border-color") {
@@ -29,13 +29,13 @@ $(document).ready(function() {
 				if ($("select option:selected").val() == "text-color") {
 				$('#circ').css('color', color); 
 				}
+				
 			});
+					$('#property').change		
+
+			
 		});
 		
-
-//		.change();
-		//console.log(property); //this works?
-
 	});
 	
 	$('#hideshow').click(function (ev) {

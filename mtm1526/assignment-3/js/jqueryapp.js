@@ -11,36 +11,29 @@ $(document).ready(function() {
 	//var bgcolor = $('background-color').val(); //not needed?
 	//var txtcolor = $('text-color').val();//same as item.value
 	//$('#circ').css('background-color', color); //this works.
+	
 	//need a switch loop for the dropdown to use value of 'color'
 	
 		$('#property').change(function () {
 			var property = "";
 			$("select option:selected").each(function () {
-			//property == $(border-color).val();
-			$('#circ').css('border-color', color); 
-
-			});
-		})
-		$('#property').change(function () {
-			var property = "";
-			$("select option:selected").each(function () {
-			//property == $(background-color).val();
+			//property == $(border-color).val(); //doesn't work
+				if ($("select option:selected").val() == "border-color") {
+				$('#circ').css('border-color', color); 
+				}
+				
+				if ($("select option:selected").val() == "bg-color") {
 				$('#circ').css('background-color', color); 
-
+				}
+			
+				if ($("select option:selected").val() == "text-color") {
+				$('#circ').css('color', color); 
+				}
 			});
-		})
+		});
 		
-		
-		$('#property').change(function () {
-			var property = "";
-			$("select option:selected").each(function () {
-			//property == $(color).val();
-			$('#circ').css('color', color); 
 
-			});
-		})
-		.change();
-		  //alert('Handler for .change() called.');
+//		.change();
 		//console.log(property); //this works?
 
 	});

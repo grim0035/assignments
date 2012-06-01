@@ -4,9 +4,19 @@ select, input, button {
 	display: block;
 }
 html {
-	background-color:#ccc;
+	background-color:#666;
 }
+
+body {
+background-color: #eee;
+padding: 25px 25px 75px 25px;
+width: 30%;
+margin: 0 auto;
+
+}
+
 div {
+	
 	background-color: #f00;
 	width: 200px;
 	height: 200px;
@@ -29,6 +39,7 @@ div {
 	color: #000;
 
 }
+
 p {
 	font-size: 12em;
 	position: relative;

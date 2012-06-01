@@ -20,3 +20,11 @@ ORDER BY release_date ASC
 UPDATE movies
 SET movie_title = 'Apocalypse How?', director = 'Scott Grimes'
 WHERE id = 9
+
+5. INSERT INTO movies
+(movie_title, release_date, director)
+VALUES ('K-19 Widowmaker',2011,'Kathryn Bigelow')
+
+6. DELETE from movies
+WHERE id=11
+ 

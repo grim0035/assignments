@@ -1,0 +1,22 @@
+1. 
+SELECT movie_title, release_date, director
+FROM movies
+WHERE id = 7
+
+2. 
+SELECT movie_title
+release_date
+FROM movies
+WHERE id < 4
+ORDER BY movie_title ASC
+
+3.
+SELECT movie_title
+director
+FROM movies
+ORDER BY release_date ASC
+
+4.
+UPDATE movies
+SET movie_title = 'Apocalypse How?', director = 'Scott Grimes'
+WHERE id = 9

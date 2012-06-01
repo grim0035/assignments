@@ -27,4 +27,10 @@ VALUES ('K-19 Widowmaker',2011,'Kathryn Bigelow')
 
 6. DELETE from movies
 WHERE id=11
- 
+
+BONUS:
+
+SELECT * 
+FROM movies
+WHERE movie_title LIKE '%S%'
+ORDER BY director DESC

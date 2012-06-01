@@ -30,10 +30,12 @@ $(document).ready(function() {
 				$('#circ').css('color', color); 
 				}
 			});
+			
 		});
 		
+		
 
-//		.change();
+		property.change();
 		//console.log(property); //this works?
 
 	});
@@ -41,7 +43,7 @@ $(document).ready(function() {
 	$('#hideshow').click(function (ev) {
 		ev.preventDefault();
 
-	 $("#circ").hide(); //need if statement to hide/show #circ
+	 $("#circ").toggle(); //use toggle instead of hide() and show() if statement to hide/show #circ
 	
 	});
 	

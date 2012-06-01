@@ -21,11 +21,13 @@ $(document).ready(function() {
 		$('#property').change(function () {
 			var property = "";
 			$("select option:selected").each(function () {
-			property = $('#color').val();
+			property = $(brdrcolor).val();
+			$('#circ').css('background-color', color); //this works.
+
 			});
 		})
-		.change();
-		console.log('yay!'); //this works
+		  //alert('Handler for .change() called.');
+		//console.log(property); //this works?
 
 	});
 	

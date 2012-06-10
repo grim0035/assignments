@@ -1,0 +1,36 @@
+1. 
+SELECT movie_title, release_date, director
+FROM movies
+WHERE id = 7
+
+2. 
+SELECT movie_title
+release_date
+FROM movies
+WHERE id < 4
+ORDER BY movie_title ASC
+
+3.
+SELECT movie_title
+director
+FROM movies
+ORDER BY release_date ASC
+
+4.
+UPDATE movies
+SET movie_title = 'Apocalypse How?', director = 'Scott Grimes'
+WHERE id = 9
+
+5. INSERT INTO movies
+(movie_title, release_date, director)
+VALUES ('K-19 Widowmaker',2011,'Kathryn Bigelow')
+
+6. DELETE from movies
+WHERE id=11
+
+BONUS:
+
+SELECT * 
+FROM movies
+WHERE movie_title LIKE '%S%'
+ORDER BY director DESC

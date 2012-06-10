@@ -2,16 +2,22 @@
 /* CSS Document */
 select, input, button {
 	display: block;
+	margin: 10px 0;
 }
 html {
 	background-color:#666;
+	font-family: Verdana, Helvetica, Geneva, sans-serif;
+	color: #666;
 }
 
 body {
-background-color: #eee;
-padding: 25px 25px 75px 25px;
-width: 30%;
-margin: 0 auto;
+	background-color: #eee;
+	padding: 25px 25px 75px 25px;
+	width: 15%;
+	margin: 25px auto;
+	border: 8px solid #444;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
 
 }
 
@@ -44,7 +50,7 @@ p {
 	font-size: 12em;
 	position: relative;
 	left: 0px;
-	top: -20px;
+	top: -35px;
 	margin:0;
 	padding:0;
 	

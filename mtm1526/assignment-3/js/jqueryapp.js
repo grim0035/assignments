@@ -15,7 +15,7 @@ $(document).ready(function() {
 	//need a switch loop for the dropdown to use value of 'color'
 	
 		$('#property').change(function () {
-			//var property = "";
+			var property = "";
 			$("select option:selected").each(function () {
 			//property == $(border-color).val(); //doesn't work
 				if ($("select option:selected").val() == "border-color") {
@@ -42,6 +42,9 @@ $(document).ready(function() {
 		ev.preventDefault();
 
 	 $("#circ").hide(); //need if statement to hide/show #circ
+	 	if ($("#circ").css('display', 'none') == true){
+	 		$("#circ").show();
+		}
 	
 	});
 	

@@ -26,18 +26,22 @@ $results = $sql->fetch(); // use fetch when only 1 return is wanted.
 <head>
 <meta charset="utf-8">
 <title><?php echo $results['movie_title'];?> &middot; Movies</title>
+	<link href="css/general.css" rel="stylesheet">
+
 </head>
 <body>
+	<p><a href="index.php">&lt;&nbsp;Back to the List</a></p>
 
 	<h1><?php echo $results['movie_title']; ?></h1>
+
 	<dl>
-		<dt>Loves Meat</dt>
+		<dt>Year of the Film</dt>
 		<dd><?php echo $results['release_date'];?></dd>
-		<dt>In Jurassic Park</dt>
+		<dt>Directed by:</dt>
 		<dd><?php echo $results['director'];?></dd>
 	</dl>
-	
-	<a href="delete.php?id=<?php echo $id; ?>">Delete</a>
+	<p><a href="delete.php?id=<?php echo $id; ?>">X Delete</a></p>
+
 
 </body>
 </html>

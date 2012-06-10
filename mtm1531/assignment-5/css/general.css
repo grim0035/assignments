@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+	background-color: #eee;
+	color: #006;
+	font-family: Verdana, Helvetica, Geneva, sans-serif;
+	font-size: 100%;
+}
+
+body {
+	margin: 0 25px;
+}
+
+table {
+	padding: 0;
+	margin:25px auto;
+	width: 60%;
+
+	
+}
+
+caption {
+	font-size: 1.25em;
+	margin: 10px;
+}
+
+tr:nth-child(even) {
+	background-color: #ccc;
+	padding: 0;
+	margin: 0;
+}
+
+tr:nth-child(odd) {
+	background-color: #eee;
+	padding: 0;
+	margin: 0;
+}
+
+th {
+	background-color: #006;
+	text-align: left;
+	padding: 4px 8px;
+	color: #fff;
+	border-radius: 10px;
+
+	
+}
+
+td {
+	border: 0;
+	padding: 4px 8px;
+	margin: 0;
+	border-radius: 10px;
+
+}
+
+dt {
+	font-weight: bold;
+	margin: 15px 0 5px 0;
+}
+
+dd {
+	margin: 0px;
+}
+
+tfoot td {
+	border: 1px solid #006;
+	padding: 4px 8px;
+	font-size: 0.75em;
+}

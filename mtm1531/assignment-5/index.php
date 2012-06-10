@@ -4,7 +4,7 @@ require_once 'includes/db.php';
 $sql = $db->query('
 	SELECT id, movie_title, release_date, director
 	FROM movies
-	ORDER BY movie_title ASC
+	ORDER BY release_date ASC
 ');
 
 $results = $sql->fetchAll(); //gets data from db
@@ -17,14 +17,14 @@ $results = $sql->fetchAll(); //gets data from db
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Movies</title>
+	<title>Movies &middot; Assignment 5</title>
+	<link href="css/general.css" rel="stylesheet">
 </head>
 <body>
 
-	<table width="100%" border="1">
+	<table width="100%">
 	<caption>Favourite "Harrison Ford" Movies</caption> <!-- summary for the table-->
 		<colgroup>
-			<col>
 			<col>
 			<col>
 			<col>
@@ -32,20 +32,25 @@ $results = $sql->fetchAll(); //gets data from db
 	<thead> <!-- table header cells -->
 		<tr>
 			<!-- table =scope defines what direction the <th> is labelling: col or row -->
-			<th scope="col">ID</th>
-			<th scope="col">Movie Title</th>
 			<th scope="col">Release Date</th>
+			<th scope="col">Movie Title</th>
 			<th scope="col">Director</th>
 		</tr>
 	</thead>
 	<?php foreach ($results as $film) :?>
-	<tr>
-		<td><?php echo $film['id'];?></td>
-		<td><a href="single.php?id=<?php echo $film['id']; ?>"><?php echo $film['movie_title'];?></a></td>
-		<td><?php echo $film['release_date'];?></td>
-		<td><?php echo $film['director'];?></td>
-	</tr>
+		<tr>
+			<td scope="col"><?php echo $film['release_date'];?></td>
+			<td scope="col"><a href="single.php?id=<?php echo $film['id']; ?>"><?php echo $film['movie_title'];?></a></td>
+			<td scope="col"><?php echo $film['director'];?></td>
+		</tr>
 	<?php endforeach; ?>
+	<tfoot> <!-- table header cells -->
+		<tr>
+			<!-- table =scope defines what direction the <th> is labelling: col or row -->
+			<td scope="col" colspan="3">Source: IMDB.com</th>
+		</tr>
+	</tfoot>
+
 
 </table>
 

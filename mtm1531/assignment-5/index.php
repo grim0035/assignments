@@ -20,6 +20,7 @@ $results = $sql->fetchAll(); //gets data from db
 	<title>Movies</title>
 </head>
 <body>
+
 	<table width="100%" border="1">
 	<caption>Favourite "Harrison Ford" Movies</caption> <!-- summary for the table-->
 		<colgroup>
@@ -37,72 +38,16 @@ $results = $sql->fetchAll(); //gets data from db
 			<th scope="col">Director</th>
 		</tr>
 	</thead>
-
-	<tr>
-		<td>ID</td>
-		<td>Movie Title</td>
-		<td>Release Date</td>
-		<td>Director</td>
-	</tr>
-	<tr>
-		<td>2</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-</table>
-
 	<?php foreach ($results as $film) :?>
-	<h2><a href="single.php?id=<?php echo $film['id']; ?>"><?php echo $film['movie_title'];?></a></h2>
-	<dl>
-		<dt>Loves Meat</dt>
-		<dd><?php echo $film['release_date'];?></dd>
-		<dt>In Jurassic Park</dt>
-		<dd><?php echo $film['director'];?></dd>
-	</dl>
+	<tr>
+		<td><?php echo $film['id'];?></td>
+		<td><a href="single.php?id=<?php echo $film['id']; ?>"><?php echo $film['movie_title'];?></a></td>
+		<td><?php echo $film['release_date'];?></td>
+		<td><?php echo $film['director'];?></td>
+	</tr>
 	<?php endforeach; ?>
+
+</table>
 
 </body>
 </html>

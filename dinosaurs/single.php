@@ -38,6 +38,8 @@ $results = $sql->fetch(); // use fetch when only 1 return is wanted.
 	</dl>
 	
 	<a href="delete.php?id=<?php echo $id; ?>">Delete</a>
+	<a href="edit.php?id=<?php echo $id; ?>">Edit</a>
+
 
 </body>
 </html>

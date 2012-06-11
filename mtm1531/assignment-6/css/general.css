@@ -58,10 +58,11 @@ td {
 dt {
 	font-weight: bold;
 	margin: 15px 0 5px 0;
+
 }
 
 dd {
-	margin: 0px;
+	margin: 4px;
 }
 
 tfoot td {
@@ -72,4 +73,8 @@ tfoot td {
 
 .buttons {
 text-align: center;
+}
+
+.form {
+	padding: 4px 0;
 }

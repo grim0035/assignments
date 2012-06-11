@@ -17,7 +17,7 @@ $results = $sql->fetchAll(); //gets data from db
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Movies &middot; Assignment 5</title>
+	<title>Movies &middot; Assignment 6</title>
 	<link href="css/general.css" rel="stylesheet">
 </head>
 <body>

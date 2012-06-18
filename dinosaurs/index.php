@@ -1,5 +1,6 @@
 <?php
 require_once 'includes/db.php';
+
 //pointer to db
 $sql = $db->query('
 	SELECT id, dino_name, loves_meat, in_jurassic_park

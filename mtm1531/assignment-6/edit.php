@@ -68,7 +68,7 @@ $sql = $db->prepare('
 
 <body>
 	<p><a href="index.php">Back to the List</a></p>
-	<h1>Edit <?php echo $results['movie_title'];?></h1>
+	<h1>Edit "<?php echo $results['movie_title'];?>"</h1>
 
 	<form method="post" action="edit.php?id=<?php echo $id; ?>">
 

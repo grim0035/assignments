@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	if (empty($errors)) {
 	// do DB stuff
+
 		$sql = $db->prepare('
 		UPDATE movies
 		SET movie_title = :movie_title
@@ -41,7 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		exit;
 	}
 } else {
-
 	$sql = $db->prepare('
 	SELECT movie_title, release_date, director
 	FROM movies
@@ -69,20 +69,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 	<p><a href="index.php">Back to the List</a></p>
 
-	<h1>Edit <?php echo $results['movie_title']; ?></h1>
+	<h1>Edit <?php echo $results['movie_title'];?></h1>
 	<form method="post" action="edit.php?id=<?php echo $id; ?>">
 		<div class="form">
 			<label for"movie_title">Movie title <?php if (isset($errors['movie_title'])) : ?> <strong class="error">is required</strong><?php endif; ?></label>
-			<input id="movie_title" name="movie_title" required value="<?php echo $movie_title; ?>">
+			<input id="movie_title" name="movie_title" required value="<?php echo $results['movie_title']; ?>">
 		</div>
 		<div class="form">
 			<label for="release_date">Year of Release <?php if (isset($errors['release_date'])) : ?> <strong class="error">is required</strong><?php endif; ?></label>
-			<input id="release_date" name="release_date" required value="<?php echo $release_date; ?>">
+			<input id="release_date" name="release_date" required value="<?php echo $results['release_date']; ?>">
 
 		</div>
 		<div class="form">
 			<label for="director">Director <?php if (isset($errors['director'])) : ?> <strong class="error">is required</strong><?php endif; ?></label>
-			<input id="director" name="director" required value="<?php echo $director; ?>">
+			<input id="director" name="director" required value="<?php echo $results['director']; ?>">
 		</div>
 		
 		<button type="submit">Edit</button>	

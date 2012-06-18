@@ -1,35 +1,41 @@
 <?php
-	require_once 'includes/db.php';
+
+require_once 'includes/db.php';
 
 $errors = array();
-
-$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
-$dino_name = filter_input(INPUT_POST, 'dino_name', FILTER_SANITIZE_STRING);
-$loves_meat = filter_input(INPUT_POST, 'loves_meat', FILTER_SANITIZE_NUMBER_INT);
-$in_jurassic_park = (isset($_POST['in_jurassic_park'])) ? 1 : 0;
+$id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+$movie_title = filter_input(INPUT_POST, 'movie_title', FILTER_SANITIZE_STRING);
+$release_date = filter_input(INPUT_POST, 'release_date', FILTER_SANITIZE_STRING);
+$director = filter_input(INPUT_POST, 'director', FILTER_SANITIZE_STRING);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	if (strlen($dino_name) < 1  || strlen($dino_name) > 256) {
-		$errors['dino_name'] = true;	
+	if (strlen($movie_title) < 1  || strlen($movie_title) > 256) {
+		$errors['movie_title'] = true;	
 	}
 	
-	if (!in_array($loves_meat, array(0,1))) {
-		$errors['loves_meat'] = true;
+	if (strlen($release_date) < 4  || strlen($release_date) > 4) {
+		$errors['release_date'] = true;	
 	}
+	
+	if (strlen($director) < 1  || strlen($director) > 256) {
+		$errors['director'] = true;	
+	}
+
 	
 	if (empty($errors)) {
 	// do DB stuff
+
 		$sql = $db->prepare('
-		UPDATE dinosaurs
-		SET dino_name = :dino_name
-			, loves_meat = :loves_meat
-			, in_jurassic_park = :in_jurassic_park
+		UPDATE movies
+		SET movie_title = :movie_title
+			, release_date = :release_date
+			, director = :director
 		WHERE id = :id
 		');
 		$sql->bindValue(':id', $id, PDO::PARAM_INT);
-		$sql->bindValue(':dino_name', $dino_name, PDO::PARAM_STR);
-		$sql->bindValue(':loves_meat', $loves_meat, PDO::PARAM_INT);
-		$sql->bindValue(':in_jurassic_park', $in_jurassic_park, PDO::PARAM_INT);
+		$sql->bindValue(':movie_title', $movie_title, PDO::PARAM_STR);
+		$sql->bindValue(':release_date', $release_date, PDO::PARAM_STR);
+		$sql->bindValue(':director', $director, PDO::PARAM_STR);
 		$sql->execute();
 		
 		header('Location: index.php');
@@ -37,8 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 } else {
 	$sql = $db->prepare('
-	SELECT dino_name, loves_meat, in_jurassic_park
-	FROM dinosaurs
+	SELECT movie_title, release_date, director
+	FROM movies
 	WHERE id = :id
 	
 	');
@@ -46,47 +52,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$sql->execute();
 		$results = $sql->fetch();
 		
-		$dino_name = $results['dino_name'];
-		$loves_meat = $results['loves_meat'];
-		$in_jurassic_park = $results['in_jurassic_park'];
+		$movie_title = $results['movie_title'];
+		$release_date = $results['release_date'];
+		$director = $results['director'];
 
 }
-
 ?><!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
-<title>edit</title>
+<title>Edit </title>
+<link href="css/general.css" rel="stylesheet">
+
 </head>
 
 <body>
-	<h1>Edit Dinosaur</h1>
-	<form method="post" action="edit.php?id=<?php echo $id; ?>">
-		<div>
-			<label for"dino_name">Dinosaur Name <?php if (isset($errors['dino_name'])) : ?> <strong class="error">is required</strong><?php endif; ?></label>
-			<input id="dino_name" name="dino_name" required value="<?php echo $dino_name; ?>">
-		</div>
-		<fieldset>
-			<legend>
-			Relationship with meat
-			<?php if (isset($errors['loves_meat'])) : ?>
-			<strong class="error">is required</strong>
-			<?php endif; ?>
-			</legend>
-			<input type="radio" id="love" name="loves_meat" value="1"
-			<?php if ($loves_meat == 1) : ?>checked<?php endif; ?>>
-			<label for="love">Loves Meat</label>
-			<input type="radio" id="hate" name="loves_meat" value="0"
-			<?php if ($loves_meat == 0) : ?>checked<?php endif; ?>>
+	<p><a href="index.php">Back to the List</a></p>
 
-			<label for="hate">Hates Meat</label>
-		</fieldset>
-		<div>
-			<input type="checkbox" id="in_jurassic_park" name="in_jurassic_park"
-			<?php if ($in_jurassic_park == 1) : ?>checked<?php endif; ?>>
-			<label for="in_jurassic_park">In Jurassic Park Movie?</label>
+	<h1>Edit <?php echo $results['movie_title'];?></h1>
+	<form method="post" action="edit.php?id=<?php echo $id; ?>">
+		<div class="form">
+			<label for"movie_title">Movie title <?php if (isset($errors['movie_title'])) : ?> <strong class="error">is required</strong><?php endif; ?></label>
+			<input id="movie_title" name="movie_title" required value="<?php echo $results['movie_title']; ?>">
+		</div>
+		<div class="form">
+			<label for="release_date">Year of Release <?php if (isset($errors['release_date'])) : ?> <strong class="error">is required</strong><?php endif; ?></label>
+			<input id="release_date" name="release_date" required value="<?php echo $results['release_date']; ?>">
+
+		</div>
+		<div class="form">
+			<label for="director">Director <?php if (isset($errors['director'])) : ?> <strong class="error">is required</strong><?php endif; ?></label>
+			<input id="director" name="director" required value="<?php echo $results['director']; ?>">
 		</div>
 		
-		<button type="submit">Save Dinosaur</button>
+		<button type="submit">Edit</button>	
+	</form>
 </body>
 </html>

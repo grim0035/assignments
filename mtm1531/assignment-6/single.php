@@ -11,7 +11,7 @@ if (empty($id)) {
 //We can create placeholders (marked with a : in front of them) and later fill them with some content
 //By using prepare we are protecting against SQL injection attacks
 $sql = $db->prepare('
-	SELECT id, movie_title, release_date, director
+	SELECT movie_title, release_date, director
 	FROM movies
 	WHERE id = :id
 ');
@@ -30,7 +30,7 @@ $results = $sql->fetch(); // use fetch when only 1 return is wanted.
 
 </head>
 <body>
-	<p><a href="index.php">&lt;&nbsp;Back to the List</a></p>
+	<p><a href="index.php">Back to the List</a></p>
 
 	<h1><?php echo $results['movie_title']; ?></h1>
 

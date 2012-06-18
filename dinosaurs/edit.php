@@ -3,7 +3,7 @@
 
 $errors = array();
 
-$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+$id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 $dino_name = filter_input(INPUT_POST, 'dino_name', FILTER_SANITIZE_STRING);
 $loves_meat = filter_input(INPUT_POST, 'loves_meat', FILTER_SANITIZE_NUMBER_INT);
 $in_jurassic_park = (isset($_POST['in_jurassic_park'])) ? 1 : 0;

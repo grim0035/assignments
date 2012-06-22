@@ -44,9 +44,9 @@ nav a:visited {
 
 }
 
-nav .current a,
-nav .current a:link,
-nav .current a:visited {
+nav .current-tab a,
+nav .current-tab a:link,
+nav .current-tab a:visited {
 	background-color:#fff;
 }
 

@@ -13,7 +13,8 @@ body {
 	margin: 0 auto;
 	padding:0;
 	background-color: #fff;	
-	
+	border: 2px solid #069;
+	border-top: 0;
 	-moz-border-radius: 0 0 9px 9px;
 	-webkit-border-bottom-left-radius: 9px;
 	-webkit-border-bottom-right-radius: 9px;
@@ -28,7 +29,9 @@ ul {
 .tabs > li {
 	margin: 0;
 	padding: 10px;
-	background-color: #ccc;
+	background-color: #ddd;
+	border: 2px solid #069;
+	border-bottom: 0;
 	
 	display: inline;
 	-moz-border-radius: 9px 9px 0 0;

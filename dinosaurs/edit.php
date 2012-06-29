@@ -1,9 +1,20 @@
 <?php
-	require_once 'includes/db.php';
+
+require_once 'includes/users.php';
+
+$_SESSION['referrer'] = $_SERVER['REQUEST_URI'];
+
+if (!user_is_signed_in()) {
+	header('Location: sign-in.php');
+	exit;
+
+}
+
+require_once 'includes/db.php';
 
 $errors = array();
 
-$id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $dino_name = filter_input(INPUT_POST, 'dino_name', FILTER_SANITIZE_STRING);
 $loves_meat = filter_input(INPUT_POST, 'loves_meat', FILTER_SANITIZE_NUMBER_INT);
 $in_jurassic_park = (isset($_POST['in_jurassic_park'])) ? 1 : 0;
@@ -88,5 +99,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		</div>
 		
 		<button type="submit">Save Dinosaur</button>
+	</form>
 </body>
 </html>

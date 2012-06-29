@@ -113,6 +113,14 @@ $(document).ready(function() {
 		
 	});
 	
+	$('#canada').on('click', function() {
+		$('#pc-zip').load('canada.html');
+	});
+	
+	$('#US').on('click', function() {
+		$('#pc-zip').load('us.html');
+	});
+		
 		$('form').on('submit', function (ev) {
 			if (
 				userAvailable.attr('data-status') == 'unchecked'
@@ -123,5 +131,7 @@ $(document).ready(function() {
 				ev.preventDefault();
 			}
 		});
+		
+	
 	
 });

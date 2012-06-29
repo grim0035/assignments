@@ -10,7 +10,6 @@ $('#tab-1').on('click', function(ev) {
 		$("li").removeClass("current-tab");
 		$('#tab-1').addClass("current-tab");
 		$('#load-content').load('page-1.html');
-	
 	});
 
 $('#tab-2').on('click', function(ev) {

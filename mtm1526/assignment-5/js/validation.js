@@ -6,6 +6,8 @@ $(document).ready(function() {
 	var emailAvailable = $('.email-available');
 
 	var passwordReqs = 0;
+	var cityReqs = 0;
+
 	
 	$('#username').on('change', function (ev) {
 		var username = $(this).val();
@@ -95,11 +97,28 @@ $(document).ready(function() {
 		}
 	});
 	
+	$('#city').on('keyup', function (ev) {
+		var city= $(this).val();
+		cityReqs = 0 ;
+		
+		if (city.match(/[a-zA-Z\s]/)) {
+			cityReqs++;
+			$('.city-valid').attr('data-valid', 'valid');
+		}else{
+			
+			$('.city-valid').attr('data-valid', 'invalid');
+
+			}
+		
+		
+	});
+	
 		$('form').on('submit', function (ev) {
 			if (
 				userAvailable.attr('data-status') == 'unchecked'
 				|| userAvailable.attr('data-status') == 'unavailable'
-				|| passwordReq < 5
+				|| passwordReqs < 5
+				|| cityReqs < 1
 			) {
 				ev.preventDefault();
 			}

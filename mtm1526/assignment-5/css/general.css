@@ -17,7 +17,7 @@ user-available {
 }
 
 .user-available:before {
-	content:"✔"
+	content:"✔";
 }
 .user-available[data-status="available"] {
 	color: #090;
@@ -27,7 +27,7 @@ user-available {
 	color: #f33;
 }
 .user-available[data-status="unavailable"]:before {
-	content:"✖"
+	content:"✖";
 }
 
 /* passwords*/
@@ -47,12 +47,6 @@ user-available {
 	content:"✔";
 }
 
-/* hide pw reqs*/
-#hide-preqs div[data-state="achieved"]{
-
-display:none;
-}
-
 
 /* email */
 
@@ -66,7 +60,7 @@ email-available {
 }
 
 .email-available:before {
-	content:"✔"
+	content:"✔";
 }
 .email-available[data-status="available"] {
 	color: #090;
@@ -76,5 +70,26 @@ email-available {
 	color: #f33;
 }
 .email-available[data-status="unavailable"]:before {
-	content:"✖"
+	content:"✖";
+}
+
+/* city */
+
+.city-valid {
+	font-size: 1.125em;
+	
+}
+
+.city-valid[data-valid="unchecked"]{
+	display: none;
+}
+
+.city-valid[data-valid="invalid"]:before {
+	color: #f33;
+	content: "x";
+}
+
+.city-valid[data-valid="valid"]:before {
+	color: #090;
+	content:"✔";
 }

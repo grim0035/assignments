@@ -3,7 +3,10 @@
 $(document).ready(function() {
 	
 	var userAvailable = $('.user-available');
+	var emailAvailable = $('.email-available');
+
 	var passwordReqs = 0;
+	
 	$('#username').on('change', function (ev) {
 		var username = $(this).val();
 			userAvailable.attr('data-status', 'unchecked');
@@ -33,6 +36,37 @@ $(document).ready(function() {
 			;
 		}
 	});
+	
+	$('#email').on('change', function (ev) {
+		var email = $(this).val();
+			emailAvailable.attr('data-status', 'unchecked');
+			
+		if (email.length >=6 && email.length <= 50) {
+			var ajax = $.post('check-email.php', {
+				'email' : email
+			});
+			
+			ajax.done(function (data) {
+				if (data == 'available') {
+					emailAvailable
+						.attr('data-status', 'available')
+						.html('Available')
+					;
+				} else {
+					emailAvailable
+						.attr('data-status', 'unavailable')
+						.html('Unavailable')
+					;
+				}
+			});
+		} else {
+			emailAvailable
+				.attr('data-status', 'unavailable')
+				.html('Unavailable')
+			;
+		}
+	});
+	
 	
 	$('#password').on('keyup', function (ev) {
 		var password= $(this).val();
